@@ -49,3 +49,8 @@ console.log('\n')
 console.log("An array containing the number of letters in each name respectively")
 console.log(names.map(Capitalizer))
 
+//Sorting Provinces alphabetically
+console.log('\n')
+console.log('Provinces sorted Alphabetically:')
+console.log(provinces.sort())
+
