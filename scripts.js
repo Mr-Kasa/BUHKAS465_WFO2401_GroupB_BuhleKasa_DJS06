@@ -13,6 +13,8 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+
+//List of names
 console.log('Names:')
 
 names.forEach((names)=>{
@@ -25,6 +27,8 @@ provinces.forEach((province)=>{
   console.log(province)
  })
 
+
+ //List of names with corresponding provinces
  function nameAndProvince(names, provinces) {
   names.forEach((name, index) => {
     console.log(`${name} (${provinces[index]})`);
@@ -34,3 +38,14 @@ provinces.forEach((province)=>{
 console.log('\n')
 console.log('Name and Province')
 nameAndProvince(names, provinces)
+
+
+//Number of letters in each name
+  
+function Capitalizer(name){
+  return name.length
+}
+console.log('\n')
+console.log("An array containing the number of letters in each name respectively")
+console.log(names.map(Capitalizer))
+
