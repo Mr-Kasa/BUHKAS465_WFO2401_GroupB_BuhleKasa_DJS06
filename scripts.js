@@ -54,3 +54,16 @@ console.log('\n')
 console.log('Provinces sorted Alphabetically:')
 console.log(provinces.sort())
 
+
+
+//Removing provinces with the word Cape From the List
+function capeRemover() {
+  const filteredArray = provinces.filter(province => !province.includes('Cape'));
+  console.log('\n');
+  console.log('Provinces array after provinces with "Cape" are removed:');
+  console.log(filteredArray);
+}
+
+capeRemover();
+
+//
