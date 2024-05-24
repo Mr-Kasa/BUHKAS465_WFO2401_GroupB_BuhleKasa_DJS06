@@ -5,7 +5,7 @@ const provinces = ['Western Cape', 'Gauteng', 'Northern Cape', 'Eastern Cape', '
 const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifso', 'Shailen', 'Frikkie']
 
 // A list of products with prices:
-// eslint-disable-next-line no-unused-vars
+
 const products = [
   { product: 'banana', price: "2" },
   { product: 'mango', price: 6 },
@@ -48,10 +48,11 @@ nameAndProvince(names, provinces)
 
 
 
-console.log('\n')
-console.log('Provinces in uppercase')
+
 
 //Turn provinces into a string
+console.log('\n')
+console.log('Provinces in uppercase')
 function upperCase(word){
     const uncapitalized = word
      const capitalized = uncapitalized.toUpperCase()
@@ -62,19 +63,26 @@ console.log(provinces.map(upperCase))
 
 
 
+
+
 //Number of letters in each name
-  
+console.log('\n')
+console.log("An array containing the number of letters in each name respectively")
 function stringLength(name){
   return name.length
 }
-console.log('\n')
-console.log("An array containing the number of letters in each name respectively")
 console.log(names.map(stringLength))
+
+
+
+
 
 //Sorting Provinces alphabetically
 console.log('\n')
 console.log('Provinces sorted Alphabetically:')
 console.log(provinces.sort())
+
+
 
 
 
@@ -85,15 +93,24 @@ function capeProvinceRemoval() {
   console.log('Number of provinces after provinces with "Cape" are removed:');
   console.log(filteredArray.length);
 }
-
 capeProvinceRemoval()
+
+
+
+//created function to test if names contains S and produces an array with boolean values
 console.log('\n')
-console.log('Check if names contain S, Returns true or false')
-//create bollean value if province name contains 'S'
-function contains_S(word){
-    return word+"   "+(word.toUpperCase()).includes('S')
-}
-console.log(names.map(contains_S))
+console.log('Return true if word contains "S" or false if not')
+function namesWithS(names) {
+ 
+  return names.map(name => {
+
+    const contains_S = name.split('').some(char => char === 'S' || char === 's');
+    
+    return { name: name, has_S: contains_S };
+  });
+};
+console.log(namesWithS(names));
+
 
 
 
@@ -108,8 +125,4 @@ let nameAndProvinceObject = names.reduce((acc, name, index) => {
 console.log(nameAndProvinceObject);
 
 
-/**
- * Question 2
- * 
- */
-
+//export default products
