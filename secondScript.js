@@ -1,4 +1,4 @@
-// import {products} from "./secondScript.js"
+// A list of products with prices:
 
 const products = [
     { product: 'banana', price: "2" },
@@ -8,7 +8,6 @@ const products = [
     { product: 'coffee', price: 10 },
     { product: 'tea', price: '' },
   ]
-
 // Question 2
  
 console.log(
