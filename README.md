@@ -1,3 +1,6 @@
+### There are 2 js files. one for each difficulty
+
+
 ### DJS06 Project Brief: Higher Order Functions
 
 #### Objective

@@ -49,11 +49,6 @@ function upperCase(word){
 }
 console.log(provinces.map(upperCase))
 
-
-
-
-
-
 //Number of letters in each name
 console.log('\n')
 console.log("An array containing the number of letters in each name respectively")
@@ -64,14 +59,10 @@ console.log(names.map(stringLength))
 
 
 
-
-
 //Sorting Provinces alphabetically
 console.log('\n')
 console.log('Provinces sorted Alphabetically:')
 console.log(provinces.sort())
-
-
 
 
 
@@ -86,16 +77,20 @@ capeProvinceRemoval()
 
 
 
+
+
+
+
 //created function to test if names contains S and produces an array with boolean values
 console.log('\n')
 console.log('Return true if word contains "S" or false if not')
 function namesWithS(names) {
  
   return names.map(name => {
-
+   
     const contains_S = name.split('').some(char => char === 'S' || char === 's');
     
-    return { name: name, has_S: contains_S };
+    return   contains_S 
   });
 };
 console.log(namesWithS(names));

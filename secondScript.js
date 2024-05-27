@@ -39,17 +39,24 @@ console.log(
 
 
     "\n",
-    (()=>{return `Product with no price`})(),
+    (()=>{return `Calculated total price using reduce`})(),
     "\n",
     /**
      * logging product prices with no price
      */
     (() => {
-        const filteredProducts = products.filter(price => !price.price);
-        return filteredProducts.map(product => product.product);
+        return products
+            .filter(product => {
+                const price = parseFloat(product.price);
+                return !isNaN(price) && price > 0; // Ensure price is a valid number and greater than 0
+            })
+            .map(product => ({
+                ...product,
+                price: parseFloat(product.price)  // Convert string prices to numbers
+            }))
+            .reduce((acc, product) => acc + product.price, 0); // Calculate the total price
     })(),
     "\n",
-
 
     "\n",
     (()=>{return `All product names into a single string`})(),
